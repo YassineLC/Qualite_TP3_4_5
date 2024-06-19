@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-public class VoitureTest implements Statistique {
+public class VoitureTest {
 
     @Test
     void creerVoiture() {
@@ -58,15 +58,5 @@ public class VoitureTest implements Statistique {
         voiture.setId(1);
         String expected = "Voiture{id=1}";
         assertEquals(expected, voiture.toString());
-    }
-
-    @Override
-    public void ajouter(Voiture voiture) {
-
-    }
-
-    @Override
-    public int prix() throws ArithmeticException {
-        return 0;
     }
 }

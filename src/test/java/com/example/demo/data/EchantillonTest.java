@@ -38,4 +38,15 @@ public class EchantillonTest {
 
         Assertions.assertEquals(93000, e.prixMoyen());
     }
+
+    @Test
+    void testPrix() {
+        Echantillon e = new Echantillon();
+        Voiture v1 = new Voiture("Renault", 45000);
+        Voiture v2 = new Voiture("Mercedes-Benz", 150000);
+        e.ajouter(v1);
+        e.ajouter(v2);
+
+        Assertions.assertEquals(195000, e.prix());
+    }
 }

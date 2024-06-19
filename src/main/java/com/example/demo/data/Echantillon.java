@@ -1,8 +1,10 @@
 package com.example.demo.data;
 
+import com.example.demo.service.Statistique;
+
 import java.util.ArrayList;
 
-public class Echantillon {
+public class Echantillon implements Statistique {
 
     private ArrayList<Voiture> echantillons ;
 
@@ -12,6 +14,15 @@ public class Echantillon {
 
     public void ajouter(Voiture voiture) {
         this.echantillons.add(voiture);
+    }
+
+    @Override
+    public float prix() throws ArithmeticException {
+        float total = 0;
+        for (int i=0; i<echantillons.size(); i++) {
+            total = total + echantillons.get(i).getPrix();
+        }
+        return total;
     }
 
     public float prixMoyen() throws ArithmeticException {
