@@ -1,11 +1,12 @@
 package com.example.demo.data;
 
+import com.example.demo.service.Statistique;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-public class VoitureTest {
+public class VoitureTest implements Statistique {
 
     @Test
     void creerVoiture() {
@@ -57,5 +58,15 @@ public class VoitureTest {
         voiture.setId(1);
         String expected = "Voiture{id=1}";
         assertEquals(expected, voiture.toString());
+    }
+
+    @Override
+    public void ajouter(Voiture voiture) {
+
+    }
+
+    @Override
+    public int prix() throws ArithmeticException {
+        return 0;
     }
 }
