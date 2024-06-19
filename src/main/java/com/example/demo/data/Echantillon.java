@@ -44,4 +44,8 @@ public class Echantillon implements Statistique {
     public Voiture getVoiture(int i) {
         return this.echantillons.get(i);
     }
+
+    public ArrayList<Voiture> getVoitures() {
+        return echantillons ;
+    }
 }
